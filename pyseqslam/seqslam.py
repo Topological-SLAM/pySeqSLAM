@@ -279,8 +279,7 @@ class SeqSLAM():
                 y[y>y_max]=y_max     
                 idx = (xx + y).astype(int)
                 ds = np.sum(flatDD[idx-1],1)
-                score[s-1] = np.min(ds)
-            
+                score[s-1] = np.min(ds)            
             
             # find min score and 2nd smallest score outside of a window
             # around the minimum 
@@ -295,5 +294,3 @@ class SeqSLAM():
             matches[N,:] = match
                 
         return matches
-    
-    
